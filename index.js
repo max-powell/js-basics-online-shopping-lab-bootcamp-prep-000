@@ -42,12 +42,13 @@ function total() {
 }
 
 function removeFromCart(item) {
-  if ((Object.keys(cart)).includes(item)) {
-    delete cart[item]
-    return cart
-  } else {
-    return 'That item is not in your cart.'
+  for (var i = 0; i < cart.length - 1;i++) {
+    if (cart[i]['itemName'] === item) {
+      delete cart[i]
+      return cart
+    }
   }
+  return 'That item is not in your cart.'
 }
 
 function placeOrder(cardNumber) {
