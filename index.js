@@ -18,10 +18,14 @@ function viewCart() {
   if (cart.length == 0) {
     return 'Your shoping cart is empty.'
   } else {
-    let array = [`In your cart, you have ${cart[0][itemName]} at $${cart[0][itemPrice]}`]
-    for (let i = 1; i < cart.length; i++) {
-      array.push(`and ${cart[i][itemName]} at $${cart[i][itemPrice]}`)
+    let array = [`In your cart, you have ${cart[0]['itemName']} at $${cart[0]['itemPrice']}`]
+    for (let i = 1; i < cart.length-1; i++) {
+      array.push(`${cart[i]['itemName']} at $${cart[i]['itemPrice']}`)
     }
+    array.push(`and ${cart[cart.length-1]['itemName']} at $${cart[cart.length-1]['itemPrice']}.`)
+    return array
+  }
+}
 
 
 function total() {
