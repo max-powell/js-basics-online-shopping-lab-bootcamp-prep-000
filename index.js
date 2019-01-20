@@ -42,7 +42,12 @@ function total() {
 }
 
 function removeFromCart(item) {
-  // write your code here
+  if ((Object.keys(cart)).includes(item)) {
+    delete cart[item]
+    return cart
+  } else {
+    return 'That item is not in your cart.'
+  }
 }
 
 function placeOrder(cardNumber) {
