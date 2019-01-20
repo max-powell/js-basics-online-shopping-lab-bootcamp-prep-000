@@ -52,7 +52,7 @@ function removeFromCart(item) {
 }
 
 function placeOrder(cardNumber) {
-  var total = total(cart)
+  total = total(cart)
   cart=[]
   return `Your total is ${total}, which will be charged to the card ${cardNumber}.`
 }
