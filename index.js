@@ -18,12 +18,12 @@ function viewCart() {
   if (cart.length == 0) {
     return 'Your shopping cart is empty.'
   } else {
-    let array = [`In your cart, you have ${cart[0]['itemName']} at $${cart[0]['itemPrice']}`]
+    var array = [`In your cart, you have ${cart[0]['itemName']} at $${cart[0]['itemPrice']}`]
     if (cart.length === 1) {
       array.push('.')
       return array.join('')
     } else{
-      for (let i = 1; i < cart.length-1; i++) {
+      for (var i = 1; i < cart.length-1; i++) {
         array.push(`${cart[i]['itemName']} at $${cart[i]['itemPrice']}`)
       }
       array.push(`and ${cart[cart.length-1]['itemName']} at $${cart[cart.length-1]['itemPrice']}.`)
@@ -34,7 +34,11 @@ function viewCart() {
 
 
 function total() {
-  // write your code here
+  var total = 0
+  for (var i = 0; i < cart.length; i++) {
+    total += cart[i][itemPrice]
+  }
+  return total
 }
 
 function removeFromCart(item) {
