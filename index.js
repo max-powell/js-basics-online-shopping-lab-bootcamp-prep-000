@@ -23,7 +23,7 @@ function viewCart() {
       array.push(`${cart[i]['itemName']} at $${cart[i]['itemPrice']}`)
     }
     array.push(`and ${cart[cart.length-1]['itemName']} at $${cart[cart.length-1]['itemPrice']}.`)
-    return array
+    return array.join(', ')
   }
 }
 
