@@ -16,7 +16,7 @@ function addToCart(item) {
 
 function viewCart() {
   if (cart.length == 0) {
-    return 'Your shoping cart is empty.'
+    return 'Your shopping cart is empty.'
   } else {
     let array = [`In your cart, you have ${cart[0]['itemName']} at $${cart[0]['itemPrice']}`]
     if (cart.length === 1) {
