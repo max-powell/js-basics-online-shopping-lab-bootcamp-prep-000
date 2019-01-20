@@ -17,12 +17,12 @@ function addToCart(item) {
 function viewCart() {
   if (cart.length == 0) {
     return 'Your shoping cart is empty.'
-  }
-  let array = []
-  for (let i = 0; i < cart.length; i++) {
-    array.push(`${cart[i][itemName]} at $${cart[i][itemPrice]}`)
-  }
-}
+  } else {
+    let array = [`In your cart, you have ${cart[0][itemName]} at $${cart[0][itemPrice]}`]
+    for (let i = 1; i < cart.length; i++) {
+      array.push(`and ${cart[i][itemName]} at $${cart[i][itemPrice]}`)
+    }
+
 
 function total() {
   // write your code here
