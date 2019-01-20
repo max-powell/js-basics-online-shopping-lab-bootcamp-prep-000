@@ -16,7 +16,9 @@ function addToCart(item) {
 
 function viewCart() {
   let array = []
-  for (let i = 0; i < cart.length; i++)
+  for (let i = 0; i < cart.length; i++) {
+    array.push(`${cart[i][itemName]} at $${cart[i][itemPrice]}`)
+  }
 }
 
 function total() {
