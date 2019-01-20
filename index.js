@@ -42,7 +42,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-  for (var i = 0; i < cart.length - 1;i++) {
+  for (var i = 0; i < cart.length - 1; i++) {
     if (cart[i]['itemName'] === item) {
       delete cart[i]
       return cart
